@@ -1,14 +1,6 @@
 const expect = require('chai').expect;
+const Q = require('./Q');
 
-function Q(){
-  this._memory = [];
-  this.enq = function(value){
-    this._memory.push(value);
-  }
-  this.deq = function(){
-    return this._memory.shift();
-  }
-}
 describe('Q', ()=> {
   it('exists', ()=> {
     expect(Q).to.be.ok;
